@@ -99,5 +99,7 @@ https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#AMICatalog
 
 #### Links
 [Terraform AWS]
+[RDS Database and EC2 Terraform AWS]
 
 [Terraform AWS]:https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
+[RDS Database and EC2 Terraform AWS]:https://betterprogramming.pub/automate-and-configure-your-rds-database-with-terraform-898fd4b8990d
