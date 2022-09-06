@@ -6,6 +6,10 @@ Terraform es una herramienta IaC (Infraestructure as Code)
 
 Se utiliza para definir y aprovisionar la infraestructura completa utilizando un lenguaje declarativo (.tf).
 
+## Video ayudantía
+
+https://drive.google.com/file/d/1vdO9nGgGuEpsC3wrmOZw-L0EaEIqyW2J/view?usp=sharing
+
 ## Instalar terraform
 
 https://learn.hashicorp.com/tutorials/terraform/install-cli?in=terraform/aws-get-started
