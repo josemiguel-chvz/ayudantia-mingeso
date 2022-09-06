@@ -24,15 +24,15 @@ https://aws.amazon.com/
 
 Para poder crear estos recursos usando terraform es necesario generar un usuario que permita la creación del recurso, esto se debe realizar en IAM (Identity and Access Management)
 
-![Texto alternativo](/ruta/a/la/imagen.jpg)
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/terraform/images/1.png)
 
 ### Creación de usuario
 
 Dentro de IAM se debe crear un nuevo usuario, es importante que tenga los permisos necesarios para acceder al recurso que se quiere crear
 
-![Texto alternativo](/ruta/a/la/imagen.jpg)
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/terraform/images/2.png)
 
-![Texto alternativo](/ruta/a/la/imagen.jpg)
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/terraform/images/3.png)
 
 En este caso se creará una instancia de EC2, por lo que se selecciona el permiso de todo acceso a este recurso
 ```
@@ -40,7 +40,7 @@ AmazonEC2FullAccess
 ```
 
 Una vez creado el usuario se debe guardar las crendeciales, existe la opción de descargar un archivo .csv.
-![Texto alternativo](/ruta/a/la/imagen.jpg)
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/terraform/images/4.png)
 
 Es importante guardar el Access Key ID y Secret Access Key ya que son necesarios para permitir que terraform pueda conectar con AWS a tráves del usuario creado y de esta manera crear el recurso solicitado.
 
@@ -57,7 +57,6 @@ con echo se puede comprobar que las variables fueron guardadas en la sesión de 
 echo $AWS_ACCESS_KEY_ID
 echo $AWS_SECRET_ACCESS_KEY
 ```
-
 
 ## Crear configuración
 
@@ -101,4 +100,7 @@ https://us-west-2.console.aws.amazon.com/ec2/home?region=us-west-2#AMICatalog
 #### Links
 [Terraform AWS]
 
+[RDS Database and EC2 Terraform AWS]
+
 [Terraform AWS]:https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started
+[RDS Database and EC2 Terraform AWS]:https://betterprogramming.pub/automate-and-configure-your-rds-database-with-terraform-898fd4b8990d
