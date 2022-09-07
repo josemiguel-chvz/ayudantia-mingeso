@@ -14,9 +14,8 @@ services:
     ports:
       - 33060:3306
   cat_app:
-    build: .
     container_name: app-web-simple
-    image: cat_app/cat_app_docker
+    image: josemiguelchvz/cat_app
     ports:
       - "8080:8080"
     environment:
