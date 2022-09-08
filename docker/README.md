@@ -94,7 +94,9 @@ Ejecutar aplicación
 
 ### Crear dockerfile
 
-Dockerfile debe estar debtro de la carpeta del proyecto spring
+Dockerfile debe estar dentro del directorio del proyecto spring
+
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/docker/images/image1.png)
 
 Estructura
 ```docker
