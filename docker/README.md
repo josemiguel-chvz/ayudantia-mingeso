@@ -19,11 +19,11 @@ Por lo que basta con ejecutar la imagen para crear el contenedor
 ```
 docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=123456 mysql
 ```
--p -> puerto_exterior:puerto_interior
---name -> nombre contenedor
--d -> se ejecuta en segundo plano
--p -> puerto "exterior:interior"
--e -> (environment)
+- -p -> puerto_exterior:puerto_interior
+- --name -> nombre contenedor
+- -d -> ejecución en segundo plano
+- -p -> puerto "exterior:interior"
+- -e -> (environment)
 
 ### Crear BD
 Ingresar a consola MYSQL
