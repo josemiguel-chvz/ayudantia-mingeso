@@ -1,16 +1,13 @@
 version: "3.8"
-volumes:
-  mysql-db-data:
 services:
   mysql-db:
     image: mysql
     restart: always
     volumes:
-      - mysql-db-data:/var/lib/mysql
+      - ./data/db:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_DATABASE: cat_app
-      # MYSQL_PASSWORD: 123456
     ports:
       - 33060:3306
   cat_app:
