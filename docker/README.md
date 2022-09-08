@@ -3,6 +3,12 @@
 https://www.docker.com/
 ```
 
+## Link ayudantía
+```
+https://drive.google.com/file/d/1NAxXrdx_g2XYvMTmCCPS83qhtSvm76N8/view?usp=sharing
+```
+
+
 ## Crear un contenedor MYSQL
 
 Para efectos de desarrollo, puede ser práctico utilizar un contenedor que ejecute una instancia de base de datos MYSQL.
