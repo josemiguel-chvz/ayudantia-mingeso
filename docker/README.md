@@ -84,6 +84,24 @@ docker ps
 docker image ls
 ```
 
+#### Crear imagen
+
+```
+docker build -t <nombre_usuario>/<nombre_repositorio> .
+```
+
+** Al construir la imagen esta usa la misma arquitectura que el host donde se creo la imagen, amazon linux requiere una arquitectura x86(amd64) por lo que puede ocurrir que necesiten cambiar la arquitectura **
+
+```
+docker buildx build --platform linux/amd64 -t <nombre_usuario>/<nombre_repositorio> .
+```
+
+
+#### Eliminar imagen
+```
+docker rmi <nombre_imagen>
+```
+
 ### Eliminar contenedor
 
 ```
@@ -122,7 +140,7 @@ Dentro de la carpeta del proyecto generar .jar para construir imagen docker
 
 Crear imagen docker
 ```
-docker build -t <nombre_usuario>/<nombre_repositorio> .  
+docker build -t <nombre_usuario>/<nombre_repositorio> .
 ```
 
 Subir imagen a [DockerHub]
@@ -170,10 +188,15 @@ services:
 docker-compose up
 ```
 
+Levantar en segundo plano
+```
+docker-compose up -d
+```
+
 ### Terminar ejecución
 
 ```
-docker-compose commit 
+docker-compose commit
 docker-compose down
 ```
 
