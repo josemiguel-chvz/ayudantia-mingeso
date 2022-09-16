@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+    tools{
+        maven 'maven'
+    }
+    stages {
+        stage('Build jar file') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'repositorio']]])
+                sh 'mvn clean install -DskipTests'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+        stage('Build docker image'){
+            steps {
+                sh 'docker build -t usuario/app .'
+            }
+        }
+        stage('Push docker image'){
+            steps {
+                script{
+                    withCredentials([string(credentialsId: 'docker-hub-password', variable: 'dockerhubpassword')]) {
+                        sh 'docker login -u usuario -p ${dockerhubpassword}'
+                    }
+                    sh 'docker push usuario/app'
+                }
+            }
+        }
+    }
+    post {
+		always {
+			sh 'docker logout'
+		}
+	}
+}
