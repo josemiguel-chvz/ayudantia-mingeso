@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  nginx:
+    container_name: nginx-proxy
+    image: nginx
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app
+  app:
+    container_name: app
+    image: usuariodockerhub/app
+    ports:
+      - "8080:8080"
+    deploy:
+      restart_policy:
+        condition: on-failure
+    environment:
+      - DB_URL=jdbc:mysql://mysql-db:3306/bd?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      - DB_USERNAME=root
+      - DB_PASSWORD=123456
+    depends_on:
+      - mysql-db
