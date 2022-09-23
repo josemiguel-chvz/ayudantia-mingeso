@@ -21,3 +21,4 @@
 [Terraform - AWS_KEY_PAIR]:https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/key_pair
 [Docker compose]:https://docs.docker.com/compose/
 [Install docker/docker-compose in amazon linux]:https://www.cyberciti.biz/faq/how-to-install-docker-on-amazon-linux-2/]
+[Docker - NGINX]:https://www.docker.com/blog/how-to-use-the-official-nginx-docker-image/
