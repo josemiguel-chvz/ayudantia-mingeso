@@ -1,5 +1,7 @@
 # Microservicios con Springboot
 
+![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/microservicios/microservicios.png)
+
 ## Eureka Server (Discovery)
 
 Se encarga de registrar y encontrar microservicios, de esta manera podran conectarse entre ellos
