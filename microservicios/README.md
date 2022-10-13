@@ -5,11 +5,15 @@
 # Dependencias
 
 - Eureka server
-- - Netflix Eureka Server
+    - Netflix Eureka Server
 
 - Gateway
-- - Eureka client
-- - Gateway
+    - Eureka Client
+    - Gateway
+
+- Apps
+    - Eureka Client
+    - Dependen del tipo de microservicio
 
 
 
