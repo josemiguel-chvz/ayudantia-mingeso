@@ -2,6 +2,10 @@
 
 ![Texto alternativo](https://github.com/josemiguel-chvz/ayudantia-mingeso/blob/develop/microservicios/microservicios.png)
 
+# Video
+
+[Docker Hub]:https://hub.docker.com/
+
 # Dependencias
 
 - Eureka server
