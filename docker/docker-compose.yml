@@ -10,15 +10,15 @@ services:
       MYSQL_DATABASE: bd
     ports:
       - 33060:3306
-  cat_app:
+  app:
     container_name: app-web-simple
     image: usuario/app
     ports:
       - "8080:8080"
     environment:
-      - DB_URL=jdbc:mysql://mysql-db:3306/bd?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
-      - DB_USERNAME=root
-      - DB_PASSWORD=123456
+      DB_URL: jdbc:mysql://mysql-db:3306/bd?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL=false
+      DB_USERNAME: root
+      DB_PASSWORD: 123456
     deploy:
       restart_policy:
         condition: on-failure
