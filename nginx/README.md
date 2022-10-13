@@ -2,6 +2,11 @@
 
 ## Documentación oficial
 
+Ayudantía
+```
+https://drive.google.com/file/d/1hoFBppuePqDorbNHs8HIgfeXH-o8wBTy/view?usp=sharing
+```
+
 ```
 https://nginx.org/en/docs/
 ```

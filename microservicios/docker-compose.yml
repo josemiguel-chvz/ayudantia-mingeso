@@ -1,0 +1,48 @@
+version: "3.8"
+services:
+  eureka-service:
+    container_name: eureka-service
+    image: usuario/eureka-service:latest
+    ports:
+      - "8761:8761"
+  gateway-service:
+    container_name: gateway-service
+    image: usuario/gateway-service:latest
+    environment:
+      - eureka.client.serviceUrl.defaultZone=http://eureka-service:8761/eureka/
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service
+  app-1-service:
+    container_name: app-1-service
+    image: usuario/app-1-service:latest
+    ports:
+      - "31231:8181"
+    environment:
+        - eureka.client.serviceUrl.defaultZone=http://eureka-service:8761/eureka/
+    deploy:
+        restart_policy:
+          condition: on-failure
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service
+  app-2-service:
+    container_name: app-2-service
+    image: usuario/app-2-service:latest
+    ports:
+      - "31438:8282"
+    environment:
+        - eureka.client.serviceUrl.defaultZone=http://eureka-service:8761/eureka/
+    deploy:
+        restart_policy:
+          condition: on-failure
+    depends_on:
+      - eureka-service
+    links:
+      - eureka-service
+  # bd-1
+  # bd-2
