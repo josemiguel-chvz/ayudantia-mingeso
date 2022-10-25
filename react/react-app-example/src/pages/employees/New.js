@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container,Row,Col, Form, Button, InputGroup, Alert } from "react-bootstrap";
+import { Container, Row,Col, Form, Button, InputGroup, Alert } from "react-bootstrap";
 
 const NewEmployee = () => {
     const [showAlert, setShowAlert] = useState(false);
@@ -10,7 +10,7 @@ const NewEmployee = () => {
         const form = event.target;
         if (form.checkValidity() === true) {
             let form_data = new FormData(form);
-            // let data = Object.fromEntries(form_data.entries());
+            let data = Object.fromEntries(form_data.entries()); // Form to Object
             // POST -> Create Employee
             setShowAlert(true);
             window.setTimeout(()=>{
@@ -69,15 +69,29 @@ const NewEmployee = () => {
                             </Col>
                         </Row>
                         <Row>
-                            <Form.Group className="mb-3" controlId="entrance_date">
+                            <Col cols="6">
+                                <Form.Group className="mb-3" controlId="entrance_date">
                                 <Form.Label>Fecha Ingreso</Form.Label>
-                                <Form.Control
-                                    type="input"
-                                    placeholder="22-01-2022"
-                                    name="entrance_date"
-                                    required
-                                />
-                            </Form.Group>
+                                    <Form.Control
+                                        type="input"
+                                        placeholder="22-01-2022"
+                                        name="entrance_date"
+                                        required
+                                    />
+                                </Form.Group>
+                            </Col>
+                            <Col cols="6">
+                                <Form.Group className="mb-3" controlId="departure_date">
+                                {/* <Form.Label>Fecha Salida</Form.Label> */}
+                                    <Form.Control
+                                        type="hidden"
+                                        placeholder=""
+                                        defaultValue={null}
+                                        name="departure_date"
+                                        readOnly
+                                    />
+                                </Form.Group>
+                            </Col>
                         </Row>
                         <Row>
                             <Form.Group className="mb-3" controlId="base_salary">
