@@ -9,8 +9,8 @@ const NewEmployee = () => {
         event.preventDefault();
         const form = event.target;
         if (form.checkValidity() === true) {
-            let form_data = new FormData(form);
-            let data = Object.fromEntries(form_data.entries()); // Form to Object
+            // let form_data = new FormData(form);
+            // let data = Object.fromEntries(form_data.entries()); // Form to Object
             // POST -> Create Employee
             setShowAlert(true);
             window.setTimeout(()=>{
