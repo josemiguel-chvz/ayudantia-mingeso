@@ -7,7 +7,7 @@ COPY package*.json ./
 # Instalar dependencias
 RUN npm install
 
-# Copiar archivos del proyecto a directorio en imagen
+# Copiar archivos del proyecto a directorio /app en imagen
 COPY . .
 
 EXPOSE 3000
