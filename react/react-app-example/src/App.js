@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from './Layout';
 import { Container } from 'react-bootstrap';
 import Index from './pages/Index';
-import Employees from './pages/employees/Index';
+import Employees from './pages/Employees';
 
 function App() {
   return (
