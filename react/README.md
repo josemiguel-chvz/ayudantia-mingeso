@@ -131,7 +131,35 @@ useEffect(() => {
 ...
 ```
 
+### Crear contenedor para aplicación React
 
+En orden de utilizar nuestra aplicación React como un contenedor debemos definir el **Dockerfile** en la raiz de nuestro proyecto
+
+```Docker
+# Node Alpine version -> light version
+FROM node:16-alpine
+WORKDIR /app
+
+# Copiar paquete de dependencias
+COPY package*.json ./
+# Instalar dependencias
+RUN npm install
+RUN npm install -g serve
+
+# Copiar archivos del proyecto a directorio /app en contenedor
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
+```
+
+Para evitar copiar node_modules y generar una imagen de tamaño muy grande se utiliza **.dockerignore**
+
+```Docker
+node_modules
+build
+```
 
 [React bootstrap]: <https://react-bootstrap.github.io/getting-started/introduction>
 [NPM]: <https://www.npmjs.com/>
