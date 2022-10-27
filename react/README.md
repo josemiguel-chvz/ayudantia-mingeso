@@ -110,6 +110,10 @@ UseEffect -> Se encarga de ejecutar código (variables, funciones) al momento de
 
 UseState -> Variables de estado, estas variables son definidas con un valor inicial y su estado puede ir cambiando al momento de renderizar la página o cuando se genera algún evento al interacturar con la página.
 
+Para realizar peticiones al backend deben tener habilidato **CrossOrigin** en sus microservicios para la dirección de su aplicación React
+
+https://spring.io/guides/gs/rest-service-cors/
+
 
 #### **GET REQUEST**
 ```js
