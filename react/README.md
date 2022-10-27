@@ -106,16 +106,20 @@ export default App;
 
 ### Conexión a Backend usando Axios
 
+#### Cors 
+
+Para realizar peticiones al backend deben tener habilitado **CrossOrigin** en sus microservicios para la dirección de su aplicación React
+
+Pueden revisar la siguiente información o los controladores de la aplicación de ejemplo de microservicios para observar como utilizarlo.
+
+https://spring.io/guides/gs/rest-service-cors/
+
+#### **GET REQUEST**
+
 UseEffect -> Se encarga de ejecutar código (variables, funciones) al momento de renderizar una pagina.
 
 UseState -> Variables de estado, estas variables son definidas con un valor inicial y su estado puede ir cambiando al momento de renderizar la página o cuando se genera algún evento al interacturar con la página.
 
-Para realizar peticiones al backend deben tener habilidato **CrossOrigin** en sus microservicios para la dirección de su aplicación React
-
-https://spring.io/guides/gs/rest-service-cors/
-
-
-#### **GET REQUEST**
 ```js
 import { useEffect, useState } from "react";
 import axios from 'axios';
