@@ -1,5 +1,10 @@
 # React
 
+- [Video Ayudantía - Parte 1]
+- [Video Ayudantía - Parte 2]
+
+
+
 ## Requisitos:
 -   [NPM] 14+ -> Gestor de paquetes JavaScript
 -   [React Init] -> Inicializador de proyecto React
@@ -166,3 +171,5 @@ build
 [Axios]: <https://axios-http.com/docs/intro>
 [React Init]: <https://reactjs.org/docs/create-a-new-react-app.html>
 [React Router]:<https://v5.reactrouter.com/web/guides/quick-start>
+[Video Ayudantía - Parte 1]:<https://drive.google.com/file/d/1V_PunfjhQPCQRaEE7OZHYITNDjbqobOz/view?usp=share_link>
+[Video Ayudantía - Parte 2]:<https://drive.google.com/file/d/1mia8gKT3fJQmrkXYSfxtfi6x6I1PVugL/view?usp=share_link>
