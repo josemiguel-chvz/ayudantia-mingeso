@@ -10,6 +10,7 @@ const Menu = () => {
                         <Nav className="me-auto">
                             <Nav.Link href="/">Inicio</Nav.Link>
                             <Nav.Link href="/employees">Empleados</Nav.Link>
+                            <Nav.Link href="/upload">Subir horas</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
             </Container>
