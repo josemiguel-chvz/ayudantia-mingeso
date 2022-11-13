@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Index/>} exact/>
           <Route path='/employees' element={<Employees/>} exact/>
-          <Route path='/upload' element={<UploadClockData/>} exact/>
+          <Route path='/upload' element={<UploadClockData/>} exact />
         </Routes>
       </Container>
     </Layout>

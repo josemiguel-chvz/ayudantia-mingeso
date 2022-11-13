@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const UploadClockData = () => {
+
     const [selectedFile, setSelectedFile] = useState(null);
 
     const handleUpload = (e) => {
@@ -13,28 +14,34 @@ const UploadClockData = () => {
         form_data.append("file", selectedFile);
 
         axios.post(url, form_data)
-        .then( (response) => {
-            console.log(response);
+        .then((response) => {
+            alert(response.data);
         })
         .catch((err) => {
             alert(err.response.data);
         })
+
+
     }
 
     return (
-        <Container style={{display: 'flex', justifyContent: 'center', marginTop: '70px'}}>
-            <Row className="mt-4">
-                <Col col="12">
-                    <Form onSubmit={handleUpload}>
+        <Container stye={{display: 'flex', justifyContent: 'center', marginTop: '90px'}}>
+            <Row className="mt-5">
+                <Col sm="8">
+                    <Form onSubmit={handleUpload}  className="mt-5">
                         <Form.Group controlId="formFile" className="mb-3">
-                            <Form.Label>Archivo data.txt</Form.Label>
-                            <Form.Control type="file" size="lg" required onChange={(e) => setSelectedFile(e.target.files[0])} />
+                            <Form.Label>Subir Archivo</Form.Label>
+                            <Form.Control
+                                type="file"
+                                size="lg"
+                                required
+                                onChange={(e) => setSelectedFile(e.target.files[0])}
+                            />
                         </Form.Group>
-                        <Button type="submit">Upload</Button>
+                        <Button type="submit">Subir</Button>
                     </Form>
                 </Col>
             </Row>
-
         </Container>
     )
 };
