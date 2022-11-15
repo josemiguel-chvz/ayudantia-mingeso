@@ -1,5 +1,7 @@
 # Kubernetes
 
+Video: https://drive.google.com/file/d/1h3z6TWB8rUN5cAEUjTrLiXMN4GUSE5I_/view?usp=share_link
+
 ## Instalación
 
 **Requiere tener docker instalado y corriendo**
